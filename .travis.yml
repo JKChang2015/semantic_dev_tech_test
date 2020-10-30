@@ -13,7 +13,7 @@ env:
   owl_file=https://gist.githubusercontent.com/dosumis/be70df2aa2958af51ac4508e862f5d88/raw/db066ab5c451ebe7d88e75016a66bd6887e1b6db/wine.owl
 
 before_script:
-  - docker run -p:7474:7474 -p 7687:7687 --env-file ./src/resources/env.list matentzn/vfb-prod
+  - docker run -d -p:7474:7474 -p 7687:7687 --env-file ./src/resources/env.list matentzn/vfb-prod &
   - sleep 30s
 
 script:
