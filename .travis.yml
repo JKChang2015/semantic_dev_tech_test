@@ -14,9 +14,8 @@ env:
 
 before_script:
   - export owl_file=file:///wine.owl
-  - docker run -d -p:7474:7474 -p 7687:7687 -v $PWD/src/resources:/import \
-    --env-file src/resources/env.list matentzn/vfb-prod
-  - sleep 30s
+  - docker run -d -p:7474:7474 -p 7687:7687 -v $PWD/src/resources:/import --env-file src/resources/env.list matentzn/vfb-prod
+  - sleep 45s
 
 script:
   - python src/load_db.py $owl_file
