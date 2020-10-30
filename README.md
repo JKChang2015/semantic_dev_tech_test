@@ -5,12 +5,10 @@ Technical test for semantic dev.
 This GitHub Repository has:
 
  *  An OWL file with an ontology/KnowledgeBase of wines (src/resources/wine.owl)
- *  A .travis.yml file that launches a containerised Neo4j DataBase with a representation of the ontology/knowledgeBase
+ *  A `.travis.ym`l file that launches a containerised Neo4j DataBase with a representation of the ontology/knowledgeBase
  
- You should be able to use the travis config to work out how to launch a local copy of the database to explore
 
-
-Excercise 1:
+### Excercise 1:
 
 Explore the OWL file in Protege and run a reaonser.
 
@@ -20,16 +18,16 @@ Please explain, in clear English, why the reasoner classifies Barolo as an Itali
 
 Launch a local copy of the DB and load the ontology
 
-``sh
+```sh
 docker run -p:7474:7474 -p 7687:7687 --env-file ./src/resources/env.list matentzn/vfb-prod
 python src/load_db.py owl_file
-``
+```
 
 You can browse at http://localhost:7474
 
 Please write concise documentation summarising the transformation of OWL to Neo4j.
 
-Excercise 2: 
+### Excercise 2: 
 
 Using a forked copy of this Repo as a base, write an API library to query the DataBase with methods to:
 
@@ -47,6 +45,6 @@ If you prefer, you may base your API on SPARQL queries of the ontology/Knowledge
 
 You should include clear documentation on how to use your API.
 
-Excercise 3:
+### Excercise 3:
 
 Write a couple of paragraphs on how you might extend the OWL modelling and content to build a KnowledgeBase of individual wines that would be useful to consumers trying to decide what wine to buy.
