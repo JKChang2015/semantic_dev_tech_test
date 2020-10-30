@@ -4,33 +4,33 @@ Technical test for semantic dev.
 
 This GitHub Repository has:
 
- *  An OWL file with an ontology/KnowledgeBase of wines (src/resources/wine.owl)
+ *  An OWL file with an ontology of wines (src/resources/wine.owl)
  *  A script for loading OWL files into a customised Neo4j database.
- *  A `.travis.yml` file that launches a containerised Neo4j DataBase and loads the OWL file into it.
+ *  A `.travis.yml` file that launches a containerised Neo4j database and loads the OWL file into it.
  
 
-### Excercise 1:
+### Exercise 1:
 
-Explore the OWL file in Protege and run a reaonser.
+Explore the OWL file in Protege and run a reasoner.
 
 ![image](https://user-images.githubusercontent.com/112839/97699007-60bd2f00-1aa1-11eb-8e1a-ab8a5b1c98ac.png)
 
-* Please explain, in clear English, why the reasoner classifies Barolo as an Italian wine.
+* Please explain, in a few clear sentences, why the reasoner classifies Barolo as an Italian wine.
 
 Launch a local copy of the DB and load the ontology
 
 ```sh
 docker run -p:7474:7474 -p 7687:7687 --env-file ./src/resources/env.list matentzn/vfb-prod
-python src/load_db.py <OWL FILE URL>
+python src/load_db.py "https://raw.githubusercontent.com/EBISPOT/semantic_dev_tech_test/main/src/resources/wine.owl"
 ```
 
 You should be able to browse at http://localhost:7474
 
-* Please write concise documentation summarising the transformation of OWL to Neo4j.
+* Compare the original OWL representation of the wine ontology and its representation as a Neo4j labelled property graph and document the transformation in your own words. How do the representations differ? How was the OWL representation mapped into the Neo4j representation?
 
-### Excercise 2: 
+### Exercise 2: 
 
-Using a forked copy of this Repo as a base, write an API library to query the DataBase with methods to:
+Using a forked copy of this repo as a base, write an API library to query the database with methods to:
 
 * List all grape growing regions (in the ontology)
 * List all varietals  (in the ontology)
@@ -39,13 +39,13 @@ Using a forked copy of this Repo as a base, write an API library to query the Da
 
 Your code should:
   * be in Python
-  * have unit tests with continuous integration via Travis or GitHub Actions
+  * have at least 3 unit tests with continuous integration via Travis or GitHub Actions
   * be well documented
 
-If you prefer, you may base your API on SPARQL queries of the ontology/KnowledgeBase in place of Cypher queries of the Neo4J DataBase.
+If you prefer, you may base your API on SPARQL queries of the OWL ontology in place of Cypher queries of the Neo4J database.
 
 You should include clear documentation on how to use your API.
 
-### Excercise 3:
+### Exercise 3:
 
-Write a couple of paragraphs on how you might extend the OWL modelling and content to build a KnowledgeBase of individual wines that would be useful to consumers trying to decide what wine to buy.
+Write a couple of paragraphs on how you might extend the OWL modelling and content to build a knowledge base of individual wines that would be useful to consumers trying to decide what wine to buy.
