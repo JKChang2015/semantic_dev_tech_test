@@ -34,7 +34,7 @@ You should be able to browse at http://localhost:7474
 
 ### Exercise 2: 
 
-Using a forked copy of this repo as a base, write an API library to query the database with methods to:
+Using a forked copy of this repo as a base, write an API library in Python to query the database with methods to:
 
 * List all grape growing regions (in the ontology)
 * List all varietals  (in the ontology)
@@ -42,8 +42,7 @@ Using a forked copy of this repo as a base, write an API library to query the da
 * Query for wine types and individual wines by: colour, varietal, region
 
 Your code should:
-  * be in Python
-  * have at least 3 unit tests with continuous integration via Travis or GitHub Actions
+  * have at least 3 unit tests, ideally with continuous integration via Travis or GitHub Actions
   * be well documented
 
 If you prefer, you may base your API on SPARQL queries of the OWL ontology in place of Cypher queries of the Neo4J database.
