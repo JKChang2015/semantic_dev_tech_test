@@ -21,6 +21,10 @@ Launch a local copy of the DB and load the ontology
 
 ```sh
 docker run -p:7474:7474 -p 7687:7687 --env-file ./src/resources/env.list matentzn/vfb-prod
+```
+Then in a separate terminal window, run:
+
+```sh
 python src/load_db.py "https://raw.githubusercontent.com/EBISPOT/semantic_dev_tech_test/main/src/resources/wine.owl"
 ```
 
