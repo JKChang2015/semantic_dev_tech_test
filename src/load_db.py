@@ -9,8 +9,10 @@ conf = "https://raw.githubusercontent.com/VirtualFlyBrain/neo4j2owl/" \
        "master/src/test/resources/minimal-config.yaml"
 
 driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "neo4j"))
-statement = "CALL ebi.spot.neo4j2owl.owl2Import('$owl_file','$conf')"
+statement = "CALL ebi.spot.neo4j2owl.owl2Import('%s','%s')" % (args.OWL_file_url, conf)
 
+print()
 with driver.session() as session:
-    session.run(statement, conf=conf, owl_file=args.OWL_file_uri)
-
+    session.run(statement)
+    r = session.run("MATCH (c:Class) return c.label limit 1")
+    print(r.single()[0])
