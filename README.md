@@ -23,7 +23,7 @@ docker run -p:7474:7474 -p 7687:7687 --env-file ./src/resources/env.list matentz
 python src/load_db.py <OWL FILE URL>
 ```
 
-You can browse at http://localhost:7474
+You should be able to browse at http://localhost:7474
 
 Please write concise documentation summarising the transformation of OWL to Neo4j.
 
