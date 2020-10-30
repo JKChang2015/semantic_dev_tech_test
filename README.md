@@ -5,7 +5,8 @@ Technical test for semantic dev.
 This GitHub Repository has:
 
  *  An OWL file with an ontology/KnowledgeBase of wines (src/resources/wine.owl)
- *  A `.travis.yml` file that launches a containerised Neo4j DataBase with a representation of the ontology/knowledgeBase
+ *  A script for loading OWL files into a customised Neo4j database.
+ *  A `.travis.yml` file that launches a containerised Neo4j DataBase and loads the OWL file into it.
  
 
 ### Excercise 1:
