@@ -5,7 +5,7 @@ Technical test for semantic dev.
 This GitHub Repository has:
 
  *  An OWL file with an ontology/KnowledgeBase of wines (src/resources/wine.owl)
- *  A `.travis.ym`l file that launches a containerised Neo4j DataBase with a representation of the ontology/knowledgeBase
+ *  A `.travis.yml` file that launches a containerised Neo4j DataBase with a representation of the ontology/knowledgeBase
  
 
 ### Excercise 1:
@@ -20,7 +20,7 @@ Launch a local copy of the DB and load the ontology
 
 ```sh
 docker run -p:7474:7474 -p 7687:7687 --env-file ./src/resources/env.list matentzn/vfb-prod
-python src/load_db.py owl_file
+python src/load_db.py <OWL FILE URL>
 ```
 
 You can browse at http://localhost:7474
