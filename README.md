@@ -1,4 +1,4 @@
-# Semantic Dev Tech Test  [![Build Status](https://travis-ci.org/EBISPOT/semantic_dev_tech_test.svg?branch=master)](https://travis-ci.org/EBISPOT/semantic_dev_tech_test)
+# Semantic Dev Tech Test  [![Build Status](https://travis-ci.com/EBISPOT/semantic_dev_tech_test.svg?branch=master)](https://travis-ci.com/EBISPOT/semantic_dev_tech_test)
 
 Technical test for semantic dev.
 
