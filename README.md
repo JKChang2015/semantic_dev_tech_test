@@ -14,7 +14,7 @@ Explore the OWL file in Protege and run a reaonser.
 
 ![image](https://user-images.githubusercontent.com/112839/97699007-60bd2f00-1aa1-11eb-8e1a-ab8a5b1c98ac.png)
 
-Please explain, in clear English, why the reasoner classifies Barolo as an Italian wine.
+* Please explain, in clear English, why the reasoner classifies Barolo as an Italian wine.
 
 Launch a local copy of the DB and load the ontology
 
@@ -25,7 +25,7 @@ python src/load_db.py <OWL FILE URL>
 
 You should be able to browse at http://localhost:7474
 
-Please write concise documentation summarising the transformation of OWL to Neo4j.
+* Please write concise documentation summarising the transformation of OWL to Neo4j.
 
 ### Excercise 2: 
 
