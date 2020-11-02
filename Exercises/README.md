@@ -24,7 +24,7 @@ Italian_wine Equivalent ***wine*** and (***grown_in*** value ***Italy***)
     * Vertices in owl can be either URIs or Literal Values. relationships are URIs. This means that neither nodes nor edges have an internal structure; they are purely a unique label. This one of the main differences between OWL/RDF and labeled property graphs. OWL generally uses blank nodes in order to represent the OWL axioms as a graph.  
 ---
 ## Exercise 2
-Please check Exercise2.ipynb or wine.py
+Please check Exercise2.ipynb (or wine.py and test_wine.py)
 
 ---
 ## Exercise 3
