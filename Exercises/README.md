@@ -4,12 +4,14 @@
 The reasoner classify Barolo as a Italian wine base on:
 
 `Barolo grown_in value Piedmont`
+
 in which,
 * Barolo is subclass of **wine**
 * Piedomont is region_of **Italy**
 * region_of is subProperty of **grown_in**
 
 thus:
+
 Italian_wine Equivalent ***wine*** and (***grown_in*** value ***Italy***)
 
 ![Alt text](./resource/e1.png)
